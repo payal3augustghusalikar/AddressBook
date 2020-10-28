@@ -74,9 +74,9 @@ class AddressBookImplementation implements AddressBookInterface {
 						break;
 				}
 			}
-			else {
+			else 
 				System.out.println("Person is not registered");
-			}
+			
 	   }	 
 	}
 	
@@ -94,26 +94,44 @@ class AddressBookImplementation implements AddressBookInterface {
 				
 				addressBook.remove(i);
 				System.out.println("this person details is deleted");
+			
+			break;
 			}
-			else {
+			else 
 				System.out.println("please enter valid name");
-			}
+			break;
 		}
 			
     }	
 	
 	public void sortByName() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	public void sortByZip() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	public void searchPerson() {
-
+		inp = new Scanner(System.in);
+		
+		System.out.println("enter First name to search person:");
+		
+		String name = inp.nextLine();
+	
+		for (Person person : addressBook) {
+			boolean isfound = false;
+			if (name.equals(person.firstName)) {
+				
+				System.out.println(person.toString());
+				
+			}
+			else 
+				System.out.println("please check entered name:");
+			
+			}
 	}
 
 	public void display() {
@@ -121,12 +139,11 @@ class AddressBookImplementation implements AddressBookInterface {
 			for(Person p : addressBook) {
 				System.out.println(p.toString());
 				
-			//	System.out.println(addressBook.get(i));	
+			
 			}
 	
 	}
 	public void quit() {
-		// TODO Auto-generated method stub
 		
 	}
 	
