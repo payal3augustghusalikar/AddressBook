@@ -30,7 +30,10 @@ class AddressBookImplementation implements AddressBookInterface {
 	     addressBook.add(person);
 	   //  System.out.println(addressBook);
 	}
-public void deletePerson() {
+	public void editPerson() {
+	
+	}
+	public void deletePerson() {
 		
     }	
 	
