@@ -2,7 +2,7 @@ package addressbook;
 
 import java.util.Scanner;
 
-public class AddressBookManager {
+public class AddressBookManagerImp {
 	
 	public void displayAddressBook() {
 	}
