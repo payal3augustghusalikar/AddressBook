@@ -10,7 +10,7 @@ public class AddressBookManagerImp {
 		int loop=0;
 		while (loop == 0) {
 			AddressBookImplementation Menu = new AddressBookImplementation();
-			System.out.println("Address Book"
+			System.out.println("\n ---- Address Book ----"
 							+ "\n1. add Person"
 							+ "\n2. edit Person"
 							+ "\n3. delete Person"
@@ -19,7 +19,7 @@ public class AddressBookManagerImp {
 							+ "\n6. search Person"
 							+ "\n7. Quit"
 							+ "\n8. display"
-							+ "\n. select any choice ");
+							+ "\n  select any choice ==> ");
 			
 			Scanner input = new Scanner(System.in); 
 

@@ -30,20 +30,20 @@ class AddressBookImplementation implements AddressBookInterface {
 	     addressBook.add(person);
 	   //  System.out.println(addressBook);
 	}
+	
 	public void editPerson() {
 		inp = new Scanner(System.in);
 		
-		System.out.println("enter First name to edit details:");
+		System.out.println("\n enter First name to edit details:");
 		
 		String name = inp.nextLine();
-		int i;
-		Person p;
-		boolean isfound = false;
+
+		//boolean isfound = false;
 		for (Person person : addressBook) {
 			System.out.println(person.toString());
 		
 			if (name.equals(person.firstName)) {
-				isfound = true;
+			//	isfound = true;
 				System.out.println("\"Select the option to edit: \n"
 							+ "1) Mobile no\n"
 							+ "2) Address\n"
@@ -55,6 +55,7 @@ class AddressBookImplementation implements AddressBookInterface {
 				 		System.out.println("enter new value:");
 				 		long MobileNo = inp.nextLong();
 				 		person.setMobileNo(MobileNo);
+				 		System.out.println("mobile no. is updated\n");
 				 		break;
 				 	case 2:
 				 		System.out.println("enter your city");
@@ -66,16 +67,39 @@ class AddressBookImplementation implements AddressBookInterface {
 				 		person.setCity(city);
 				 		person.setState(state);
 				 		person.setZip(zip);
+				 		System.out.println("(person.firstname) Address is updated\n");
 						break;
 					default:
 						System.out.println("please enter right choice");
 						break;
 				}
 			}
+			else {
+				System.out.println("Person is not registered");
+			}
 	   }	 
 	}
+	
+	
 	public void deletePerson() {
+		inp = new Scanner(System.in);
 		
+		System.out.println("enter First name to delit details:");
+		
+		String name = inp.nextLine();
+		for (int i=0; i<addressBook.size(); i++) {
+			String personName = addressBook.get(i).firstName;
+	
+			if (name.equals(personName)) {
+				
+				addressBook.remove(i);
+				System.out.println("this person details is deleted");
+			}
+			else {
+				System.out.println("please enter valid name");
+			}
+		}
+			
     }	
 	
 	public void sortByName() {
@@ -93,7 +117,7 @@ class AddressBookImplementation implements AddressBookInterface {
 	}
 
 	public void display() {
-		System.out.println("Entered Person Details is:");
+		System.out.println("\nEntered Person Details is:");
 			for(Person p : addressBook) {
 				System.out.println(p.toString());
 				

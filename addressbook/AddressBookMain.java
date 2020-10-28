@@ -11,14 +11,14 @@ import java.util.Scanner;
 			int loop=0;
 			while (loop == 0) {
 				
-				System.out.println("Address Book"
+				System.out.println("\n *** Address Book ***"
 						+ "\n1. Create newAddressBook"
 						+ "\n2. Open existing AddressBook"
 						+ "\n3. Save Address Book"
 						+ "\n4. Save as AddressBook"
 						+ "\n5. Close AddressBook"
 						+ "\n6. Quit"
-						+ " \n select any choice ==> ");
+						+ "\n  select any choice ==> ");
 				int choice = sc.nextInt();
 				switch (choice) {
 				case 1:
