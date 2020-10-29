@@ -2,7 +2,7 @@ package addressbook;
 
 import java.util.Scanner;
 
-public class AddressBookManagerImp {
+public class AddressBookManagerImp implements AddressBookManagerInterface {
 	
 	public void displayAddressBook() {
 	}
@@ -58,34 +58,8 @@ public class AddressBookManagerImp {
 	}
 	
 	
-	private void display() {
-		// TODO Auto-generated method stub
-		
-	}
-	private void searchPerson() {
-		// TODO Auto-generated method stub
-		
-	}
-	private void sortByZip() {
-		// TODO Auto-generated method stub
-		
-	}
-	private void sortByName() {
-		// TODO Auto-generated method stub
-		
-	}
-	private void deletePerson() {
-		// TODO Auto-generated method stub
-		
-	}
-	private void editPerson() {
-		// TODO Auto-generated method stub
-		
-	}
-	private void addPerson() {
-		// TODO Auto-generated method stub
-		
-	}
+	
+	
 	public void saveAddressBook() {
 		
 	}
@@ -95,10 +69,15 @@ public class AddressBookManagerImp {
 	public void closeAddressBook() {
 		
 	}
-	public void quit() {
+	/* public void quit() { */
+		
+	
+	public void openAddressBook() {
+		// TODO Auto-generated method stub
 		
 	}
-	public void openAddressBook() {
+	@Override
+	public void quit() {
 		// TODO Auto-generated method stub
 		
 	}
