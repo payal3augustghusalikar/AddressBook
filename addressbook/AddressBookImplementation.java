@@ -113,6 +113,10 @@ class AddressBookImplementation implements AddressBookInterface {
 	}
 
 	public void sortByZip() {
+		Collections.sort(addressBook, new ZipComparator());
+		System.out.println("sorted by zip");
+		for (Person person : addressBook)
+			System.out.println(person.toString());
 		
 		
 	}
@@ -147,25 +151,8 @@ class AddressBookImplementation implements AddressBookInterface {
 	
 	}
 	public void quit() {
-inp = new Scanner(System.in);
-		
-		System.out.println("enter First name to search person:");
-		
-		String name = inp.nextLine();
-	
-		Person p;
-		boolean isfound = false;
-		for (Person person : addressBook) {
-			System.out.println(person.toString());
-		
-			if (name.equals(person.MobileNo)) {
-				System.out.println(person.toString());
-			}
-			else {
-				System.out.println("please check entered name:");
-			}
+
 			}
 		
-	}
 	
 }
