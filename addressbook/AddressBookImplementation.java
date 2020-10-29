@@ -43,7 +43,7 @@ class AddressBookImplementation implements AddressBookInterface {
 			System.out.println(person.toString());
 		
 			if (name.equals(person.firstName)) {
-			//	isfound = true;
+				//isfound = true;
 				System.out.println("\"Select the option to edit: \n"
 							+ "1) Mobile no\n"
 							+ "2) Address\n"
@@ -76,7 +76,7 @@ class AddressBookImplementation implements AddressBookInterface {
 			}
 			else 
 				System.out.println("Person is not registered");
-			
+			break;
 	   }	 
 	}
 	
@@ -117,20 +117,20 @@ class AddressBookImplementation implements AddressBookInterface {
 	public void searchPerson() {
 		inp = new Scanner(System.in);
 		
-		System.out.println("enter First name to search person:");
+		System.out.println("enter mobile no. to search person:");
 		
-		String name = inp.nextLine();
+		int number = inp.nextInt();
 	
 		for (Person person : addressBook) {
-			boolean isfound = false;
-			if (name.equals(person.firstName)) {
+			//boolean isfound = false;
+			if (number == (person.MobileNo)) {
 				
 				System.out.println(person.toString());
-				
+				break;
 			}
 			else 
-				System.out.println("please check entered name:");
-			
+				System.out.println("please check entered mobile number:");
+			break;
 			}
 	}
 
